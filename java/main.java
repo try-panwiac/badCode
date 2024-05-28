@@ -67,7 +67,7 @@ class Connector5 {
 class Connector6 {
     @javax.jws.WebMethod
     void connect(HttpServletRequest req){
-          javax.servlet.http.Cookie cook = new Cookie("cookie");
+          javax.servlet.http.Cookie cook = new Cookie("cookie2");
           cook.setSecure(false);
           req.addCookie(cook);
     }
@@ -77,7 +77,7 @@ class Connector6 {
 class Connector7 {
     @javax.jws.WebMethod
     void connect(HttpServletRequest req){
-        Cookie cook = new Cookie("cookie");
+        Cookie cook = new Cookie("cookie2");
         cook.setMaxAge(31536000);
     }
 }
