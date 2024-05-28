@@ -69,6 +69,7 @@ class Connector6 {
     void connect(HttpServletRequest req){
           javax.servlet.http.Cookie cook = new Cookie("cookie");
           cook.setSecure(false);
+          //Adding comment
           req.addCookie(cook);
     }
 }
