@@ -1,2 +1,2 @@
-# checkov:skip=CKV3_SAST_4: Lets Update again
+# checkov:skip=CKV3_SAST_4: bla bla
 assert()
