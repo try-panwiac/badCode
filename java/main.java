@@ -136,8 +136,8 @@ public class Decorator2 {
 public class Decorator3 {
 
     public void decorator(HttpServletRequest request) {
-            Parameter param = request.getParameter('param');
-            new java.io.FileReader(param);
+            Parameter param = request.getParameter('param'); // Comment
+            new java.io.FileReader(param); // Comment
     }
 }
 
