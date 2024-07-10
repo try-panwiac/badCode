@@ -53,7 +53,7 @@ class LogEntryAdminMixin(object):
         changes = json.loads(obj.changes)
         msg = '<table><tr><th>#</th><th>Field</th><th>From</th><th>To</th></tr>'
         for i, field in enumerate(sorted(changes), 1):
-            value = [i, field] + (['***', '***'] if field == 'password' else changes[field])
+            value = [i, field] + (['****', '****'] if field == 'password' else changes[field])
             msg += format_html('<tr><td>{}</td><td>{}</td><td>{}</td><td>{}</td></tr>', *value)
 
         msg += '</table>'
@@ -62,7 +62,7 @@ class LogEntryAdminMixin(object):
 
 
 class State(models.Model):
-    name=models.CharField(max_length=150)
+    name=models.CharField(max_length=150) # Test
 
 class City(models.Model):
     name=models.CharField(max_length=150)
@@ -78,7 +78,7 @@ students = Student.objects.filter(
     ).extra(
         select={
             'state':
-                'SELECT name FROM state WHERE '
+                'SELECT name FROM state2 WHERE '
                 'state.id = '
                 'testapp_student.state_id',
             'city':
