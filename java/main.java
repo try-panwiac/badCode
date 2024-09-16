@@ -11,7 +11,7 @@ class Connector1 {
     @javax.jws.WebMethod
     void connect(HttpServletRequest req){
         HttpServletResponse res = new HttpServletResponse();
-        res.setHeader("Access-Control-Allow-Origin", "*");
+        res.setHeader("Access-Control-Allow-Origin", "*"); 
     }
 }
 
@@ -20,7 +20,7 @@ public class HttpRequestDebugFilter implements Filter {
     public void doFilter(ServletRequest request) throws IOException,
         ServletException {
             if (request instanceof HttpServletRequest) {
-            javax.crypto.Cipher.getInstance("/CBC/PKCS5Padding")
+            javax.crypto.Cipher.getInstance("/CBC/PKCS5Padding" )
         }
     }
 }
@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
-    http.csrf().ignoringAntMatchers("/route/fre");
+    http.csrf().ignoringAntMatchers("/route/fre" );
   }
 }
 
@@ -43,33 +43,33 @@ class Connector2 {
 
 class Connector3 {
     void connect(HttpServletRequest req){
-        javax.servlet.http.Cookie cookie = new Cookie("cookie")
+        javax.servlet.http.Cookie cookie = new Cookie("cookie" )
         HttpServletResponse res = new HttpServletResponse();
-        res.addCookie(cookie);
+        res.addCookie(cookie );
     }
 }
 
 class Connector4 {
     @javax.jws.WebMethod
     void connect(HttpServletRequest req){
-        javax.crypto.Cipher.getInstance("DES/CBC/NoPadding");
+        javax.crypto.Cipher.getInstance("DES/CBC/NoPadding" );
     }
 }
 
 class Connector5 {
     @javax.jws.WebMethod
     void connect(HttpServletRequest req){
-        Keygen keygen = javax.crypto.KeyGenerator.getInstance("Blowfish");
-        keygen.init(100);
+        Keygen keygen = javax.crypto.KeyGenerator.getInstance("Blowfish" );
+        keygen.init(100 );
     }
 }
 
 class Connector6 {
     @javax.jws.WebMethod
     void connect(HttpServletRequest req){
-          javax.servlet.http.Cookie cook = new Cookie("cookie");
-          cook.setSecure(false);
-          req.addCookie(cook);
+          javax.servlet.http.Cookie cook = new Cookie("cookie" );
+          cook.setSecure(false );
+          req.addCookie(cook );
     }
 }
 
@@ -77,23 +77,23 @@ class Connector6 {
 class Connector7 {
     @javax.jws.WebMethod
     void connect(HttpServletRequest req){
-        Cookie cook = new Cookie("cookie");
-        cook.setMaxAge(31536000);
+        Cookie cook = new Cookie("cookie" );
+        cook.setMaxAge(31536000 );
     }
 }
 
 class Connector8 {
     void connect(HttpServletRequest req){
-        java.nio.file.Files.createTempDirectory("file");
+        java.nio.file.Files.createTempDirectory("file" );
     }
 }
 
 public class WeakNightVoter implements AccessDecisionVoter {
     @Override
-    public int vote(Authentication authentication, Object object, Collection collection) {  // Noncompliant
-      Calendar calendar = Calendar.getInstance();
+    public int vote(Authentication authentication, Object object, Collection collection) {  //Noncompliant
+      Calendar calendar = Calendar.getInstance( );
       int currentHour = calendar.get(Calendar.HOUR_OF_DAY);
-      return ACCESS_ABSTAIN; // Noncompliant
+      return ACCESS_ABSTAIN; //Noncompliant
     }
 }
 
@@ -102,7 +102,7 @@ class Connector9 {
     void connect(HttpServletRequest req){
         Cookie cook = new Cookie("cookie");
         for (Cookie cookie : req.getCookies()) {
-            cookie.getPath();
+            cookie.getPath( );
         }
     }
 }
@@ -110,7 +110,7 @@ class Connector9 {
 class Connector10 {
     @javax.jws.WebMethod
     void connect(HttpServletRequest req){
-        Cookie cook = new Cookie("cookie");
+        Cookie cook = new Cookie("cookie" );
         req.setAttribute(cook.getString(), cook.getVal());
     }
 }
@@ -126,7 +126,7 @@ public class Decorator2 {
 
     public void decorator(HttpServletRequest request) {
             ServletFileUpload sfu = new ServletFileUpload();
-            FileItem[] files = sfu.parseRequest(request);
+            FileItem[] files = sfu.parseRequest(request );
             for (FileItem file : files) {
                 System.out.println(file.getName());
             }
